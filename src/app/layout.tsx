@@ -8,11 +8,7 @@ export const metadata: Metadata = {
   description: "Ecommerce de tesla",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode  }> ) {
   return (
     <html lang="es">
       <body className={inter.className}>{children}</body>
