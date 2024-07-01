@@ -18,9 +18,9 @@ export const TopMenu = () => {
 
             {/* CATEGORIES */}
             <div className='hidden sm:block' >
-                <Link href='/category/mens'   className=' rounded-md p-2 m-2  hover:bg-gray-100 transition-all' > Hombres </Link>
-                <Link href='/category/womens' className=' rounded-md p-2 m-2  hover:bg-gray-100 transition-all' > Mujeres </Link>
-                <Link href='/category/kids'   className=' rounded-md p-2 m-2  hover:bg-gray-100 transition-all' > Niños </Link>
+                <Link href='/category/men'   className=' rounded-md p-2 m-2  hover:bg-gray-100 transition-all' > Hombres </Link>
+                <Link href='/category/women' className=' rounded-md p-2 m-2  hover:bg-gray-100 transition-all' > Mujeres </Link>
+                <Link href='/category/kid'   className=' rounded-md p-2 m-2  hover:bg-gray-100 transition-all' > Niños </Link>
             </div>
 
             {/* SEARCH, CART, MENU */}

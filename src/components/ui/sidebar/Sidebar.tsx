@@ -64,34 +64,34 @@ export const Sidebar = () => {
                 {/* Opciones de Menu */}
                 <Link
                     href="/"
-                    className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+                    className="flex items-center mt-3 p-2 hover:bg-gray-100 rounded transition-all"
                 >
-                    <IoPersonOutline size={30} />
-                    <span className="ml-3 text-xl">Perfil</span>
+                    <IoPersonOutline size={25} />
+                    <span className="ml-3 text-lg">Perfil</span>
                 </Link>
 
                 <Link
                     href="/"
-                    className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+                    className="flex items-center mt-3 p-2 hover:bg-gray-100 rounded transition-all"
                 >
-                    <IoTicketOutline size={30} />
-                    <span className="ml-3 text-xl">Ordenes</span>
+                    <IoTicketOutline size={25} />
+                    <span className="ml-3 text-lg">Ordenes</span>
                 </Link>
 
                 <Link
                     href="/"
-                    className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+                    className="flex items-center mt-3 p-2 hover:bg-gray-100 rounded transition-all"
                 >
-                    <IoLogInOutline size={30} />
-                    <span className="ml-3 text-xl">Ingresar</span>
+                    <IoLogInOutline size={25} />
+                    <span className="ml-3 text-lg">Ingresar</span>
                 </Link>
 
                 <Link
                     href="/"
-                    className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+                    className="flex items-center mt-3 p-2 hover:bg-gray-100 rounded transition-all"
                 >
-                    <IoLogOutOutline size={30} />
-                    <span className="ml-3 text-xl">Salir</span>
+                    <IoLogOutOutline size={25} />
+                    <span className="ml-3 text-lg">Salir</span>
                 </Link>
 
                 {/* Line Separator */}
@@ -100,26 +100,26 @@ export const Sidebar = () => {
 
                 <Link
                     href="/"
-                    className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+                    className="flex items-center mt-3 p-2 hover:bg-gray-100 rounded transition-all"
                 >
-                    <IoShirtOutline size={30} />
-                    <span className="ml-3 text-xl">Productos</span>
+                    <IoShirtOutline size={25} />
+                    <span className="ml-3 text-lg">Productos</span>
                 </Link>
 
                 <Link
                     href="/"
-                    className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+                    className="flex items-center mt-3 p-2 hover:bg-gray-100 rounded transition-all"
                 >
-                    <IoTicketOutline size={30} />
-                    <span className="ml-3 text-xl">Ordenes</span>
+                    <IoTicketOutline size={25} />
+                    <span className="ml-3 text-lg">Ordenes</span>
                 </Link>
 
                 <Link
                     href="/"
-                    className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+                    className="flex items-center mt-3 p-2 hover:bg-gray-100 rounded transition-all"
                 >
-                    <IoPeopleOutline size={30} />
-                    <span className="ml-3 text-xl">Usuarios</span>
+                    <IoPeopleOutline size={25} />
+                    <span className="ml-3 text-lg">Usuarios</span>
                 </Link>
 
             </nav>
