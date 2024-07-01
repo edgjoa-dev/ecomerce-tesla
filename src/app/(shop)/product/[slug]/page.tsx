@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { initialData } from '../../../../seed/seed';
 import Image from 'next/image';
 import { titleFont } from '@/config/fonts';
+import { SizeSelector } from '@/components';
 
 
 
@@ -35,7 +36,10 @@ export default function ProductPage({params}: Props) {
                 <p className='text-lg font-semibold mb-5 mt-1'>${product.price}</p>
 
             {/* Selector de Tallas */}
-
+            <SizeSelector
+                selectedSize={product.sizes[ 0 ]}
+                availableSizes={product.sizes}
+            />
             {/* Selector de Cantidad */}
 
             {/* Boton */}
