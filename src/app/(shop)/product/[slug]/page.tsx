@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation';
 import { initialData } from '../../../../seed/seed';
-import Image from 'next/image';
 import { titleFont } from '@/config/fonts';
 import { SizeSelector } from '@/components';
 
@@ -18,8 +17,9 @@ export default function ProductPage({params}: Props) {
     const { slug } = params;
     const product = initialData.products.find( product => product.slug === slug );
 
-    if (!product){
+    if (!product) {
         notFound();
+        return null; // Agrega este retorno para evitar errores no manejados
     }
 
     return(
