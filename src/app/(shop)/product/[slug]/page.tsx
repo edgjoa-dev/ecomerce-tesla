@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { initialData } from '../../../../seed/seed';
 import { titleFont } from '@/config/fonts';
-import { SizeSelector } from '@/components';
+import { QuantitySelector, SizeSelector } from '@/components';
 
 
 
@@ -23,7 +23,7 @@ export default function ProductPage({params}: Props) {
     }
 
     return(
-        <section className='mt-5 mb-20 grid md:grid-cols-3 gap-3'>
+        <section className='mt-16 mb-20 grid md:grid-cols-3 gap-3'>
             {/* Slideshow */}
             <div className='col-span-1 md:col-span-2 bg-red-500'>
                 {/* Imagenes */}
@@ -41,6 +41,8 @@ export default function ProductPage({params}: Props) {
                 availableSizes={product.sizes}
             />
             {/* Selector de Cantidad */}
+
+            <QuantitySelector quantity={2} />
 
             {/* Boton */}
             <button className='bg-blue-600 p-2 rounded-md text-white lg:w-7/12 w-full  hover:bg-blue-800 transition-all' >
