@@ -1,27 +1,27 @@
 import { getByText, render, screen } from '@testing-library/react'
 import Home from '../app/(shop)/page';
 
-// describe('Pruebas en el componente root de la aplicación', () => {
-//     test("Debe ser true", ()=> {
-//         expect(true).toBe(true);
-//     })
-// })
 
+describe('pruebas en el componente Home', () => {
 
-describe('Debe de contener el titulo', () => {
+    const page = ()=> render(<Home />);
 
     test('Debe de contener el texto "Tienda"', () => {
-
-        render(<Home />)
-        screen.debug();
+        page();
+        //screen.debug();
 
         const title = screen.getByText('Tienda');
-        const subtitle = screen.getByText('Todos los productos');
 
         expect(title).toBeInTheDocument();
+        expect(title).toBeVisible();
+    });
+
+    test('should be show text "Todos los productos"', () => {
+        page();
+        const subtitle = screen.getByText('Todos los productos');
+
         expect(subtitle).toBeInTheDocument();
         expect(subtitle).toBeVisible();
-
     });
 
 
