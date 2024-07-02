@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { initialData } from '../../../../seed/seed';
 import { titleFont } from '@/config/fonts';
-import { QuantitySelector, SizeSelector } from '@/components';
+import { ProductSlideShow, QuantitySelector, SizeSelector } from '@/components';
 
 
 
@@ -23,11 +23,14 @@ export default function ProductPage({params}: Props) {
     }
 
     return(
-        <section className='mt-16 mb-20 grid md:grid-cols-3 gap-3'>
+        <section className='mt-16 mb-20 grid md:grid-cols-2 gap-3'>
             {/* Slideshow */}
-            <div className='col-span-1 md:col-span-2 bg-red-500'>
-                {/* Imagenes */}
-                Photo
+            <div className='col-span-2 md:col-span-1'>
+                <ProductSlideShow
+                    images={product.images}
+                    title={product.title}
+                    className={'product-slide-show'}
+                />
             </div>
 
             {/* Details */}
@@ -40,8 +43,8 @@ export default function ProductPage({params}: Props) {
                 selectedSize={product.sizes[ 0 ]}
                 availableSizes={product.sizes}
             />
-            {/* Selector de Cantidad */}
 
+            {/* Selector de Cantidad */}
             <QuantitySelector quantity={2} />
 
             {/* Boton */}
@@ -53,9 +56,6 @@ export default function ProductPage({params}: Props) {
             <p className='text-sm mt-2' > {product.description} </p>
 
             </div>
-
-
-
 
         </section>
     )

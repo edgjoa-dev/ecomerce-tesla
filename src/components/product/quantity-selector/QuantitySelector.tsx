@@ -23,7 +23,7 @@ export const QuantitySelector = ({quantity}: Props) => {
                 <IoRemoveCircleOutline size={30} />
             </button>
 
-            <span className='w-20 mx-3 px-5 bg-gray-100 text-center py-1 rounded-sm'>
+            <span className='w-20 mx-3 px-5 bg-gray-100 text-center font-semibold py-1 rounded-sm'>
                 { count }
             </span>
 
