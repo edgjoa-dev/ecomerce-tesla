@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { initialData } from '../../../../seed/seed';
 import { titleFont } from '@/config/fonts';
-import { ProductSlideShow, QuantitySelector, SizeSelector } from '@/components';
+import { ProductMobileSlideShow, ProductSlideShow, QuantitySelector, SizeSelector } from '@/components';
 
 
 
@@ -24,9 +24,18 @@ export default function ProductPage({params}: Props) {
 
     return(
         <section className="mt-5 mb-20 grid grid-cols-1 md:grid-cols-6 gap-1">
-        {/* <section className="ml-10 mt-5 mb-20 flex flex-row justify-center items-center w-8/12 md:grid-cols-3 gap-10 "> */}
+
             {/* Slideshow */}
             <div className="col-span-2 md:col-span-3">
+
+                {/* MobileDesing */}
+                <ProductMobileSlideShow
+                    images={product.images}
+                    title={product.title}
+                    className="block md:hidden"
+                />
+
+                {/* Desktop desing */}
                 <ProductSlideShow
                     images={product.images}
                     title={product.title}
@@ -35,7 +44,7 @@ export default function ProductPage({params}: Props) {
             </div>
 
             {/* Details */}
-            <div className='col-span-2 px-5 py-5 ml-5 '>
+            <div className='col-span-2 px-5 py-5 sm:ml-5'>
                 <h1 className={`${ titleFont.className } text-2xl font-bold antialiased`} > {product.title} </h1>
                 <p className='text-lg font-semibold mb-5 mt-1'>${product.price}</p>
 
