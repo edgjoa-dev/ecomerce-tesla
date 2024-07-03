@@ -23,18 +23,19 @@ export default function ProductPage({params}: Props) {
     }
 
     return(
-        <section className='mt-16 mb-20 grid md:grid-cols-2 gap-3'>
+        <section className="mt-5 mb-20 grid grid-cols-1 md:grid-cols-6 gap-1">
+        {/* <section className="ml-10 mt-5 mb-20 flex flex-row justify-center items-center w-8/12 md:grid-cols-3 gap-10 "> */}
             {/* Slideshow */}
-            <div className='col-span-2 md:col-span-1'>
+            <div className="col-span-2 md:col-span-3">
                 <ProductSlideShow
                     images={product.images}
                     title={product.title}
-                    className={'product-slide-show'}
+                    className="hidden md:block"
                 />
             </div>
 
             {/* Details */}
-            <div className='col-span-1 px-5 p-3'>
+            <div className='col-span-2 px-5 py-5 ml-5 '>
                 <h1 className={`${ titleFont.className } text-2xl font-bold antialiased`} > {product.title} </h1>
                 <p className='text-lg font-semibold mb-5 mt-1'>${product.price}</p>
 
@@ -45,7 +46,7 @@ export default function ProductPage({params}: Props) {
             />
 
             {/* Selector de Cantidad */}
-            <QuantitySelector quantity={2} />
+            <QuantitySelector quantity={1} />
 
             {/* Boton */}
             <button className='bg-blue-600 p-2 rounded-md text-white lg:w-7/12 w-full  hover:bg-blue-800 transition-all' >
@@ -53,7 +54,7 @@ export default function ProductPage({params}: Props) {
             </button>
 
             <h3 className='text-sm mt-10 font-bold' > Descripción </h3>
-            <p className='text-sm mt-2' > {product.description} </p>
+            <p className='text-sm mt-1' > {product.description} </p>
 
             </div>
 
