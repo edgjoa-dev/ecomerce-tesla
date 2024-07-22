@@ -14,7 +14,7 @@ const productsCart = [
 export default function Cart() {
     return (
         <section className="flex justify-center items-center mb-72 h-[600px] w-full px-10  sm:px-0" >
-            <div className="flex flex-col w-[1000px] p-3">
+            <div className="flex flex-col w-[1000px] p-3 mt-36">
 
                 <Title title={'Carrito de Compras'} subtitle={''} className={''} />
 
@@ -28,7 +28,7 @@ export default function Cart() {
                         {/* Items cart */}
                         {
                             productsCart.map(({ slug, images, title, price }) => (
-                                <section key={slug} className='flex'>
+                                <section key={slug} className='flex mt-5'>
                                     <div>
                                         <Image
                                             src={`/products/${images[0]}`}
@@ -41,10 +41,10 @@ export default function Cart() {
                                         <p>{title}</p>
                                         <p>${price}</p>
                                         <QuantitySelector quantity={3} />
-
-                                        <button className='underline mt-3'>
+                                        <button className='rounded-lg outline outline-2 outline-offset-2 p-1 w-[120px] mt-1 hover:bg-gray-100 hover:underline hover:outline-none'>
                                             Remover
                                         </button>
+
                                     </div>
                                 </section>
                             ))
