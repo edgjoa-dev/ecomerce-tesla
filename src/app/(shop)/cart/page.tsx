@@ -9,18 +9,20 @@ const productsCart = [
     initialData.products[0],
     initialData.products[1],
     initialData.products[2],
+    initialData.products[3],
+    initialData.products[4],
 ];
 
 export default function Cart() {
     return (
-        <section className="flex justify-center items-center mb-72 h-[600px] w-full px-10  sm:px-0" >
+        <section className="flex justify-center items-center mb-72 h-[600px] mt-32 px-10  sm:px-0" >
             <div className="flex flex-col w-[1000px] p-3 mt-36">
 
                 <Title title={'Carrito de Compras'} subtitle={''} className={''} />
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 gap-10'>
+                <div className='grid grid-cols-1 justify-center items-center sm:grid-cols-2 gap-10'>
                     {/* carrito */}
-                    <div className='flex flex-col mt-5'>
+                    <section className='flex flex-col mt-5'>
                         <span className='text-xl'> Agregar más items </span>
                         <Link href='/' className='underline mb-5'> Continuar comprando</ Link>
 
@@ -35,13 +37,17 @@ export default function Cart() {
                                             alt={title}
                                             height={100}
                                             width={100}
+                                            style={{
+                                                height: '100px',
+                                                width: '100px',
+                                            }}
                                             className='mr-5 rounded' />
                                     </div>
                                     <div>
                                         <p>{title}</p>
                                         <p>${price}</p>
                                         <QuantitySelector quantity={3} />
-                                        <button className='rounded-lg outline outline-2 outline-offset-2 p-1 w-[120px] mt-1 hover:bg-gray-100 hover:underline hover:outline-none'>
+                                        <button className='rounded-lg  p-1 w-[100px] mt-1 hover:text-red-600 hover:transition hover:outline hover:ease-in-out'>
                                             Remover
                                         </button>
 
@@ -49,10 +55,34 @@ export default function Cart() {
                                 </section>
                             ))
                         }
-                    </div>
+                    </section>
 
                     {/* Checkout */}
-                    <div className='flex flex-col justify-center items-center mt-5 p-3' >Checkout</div>
+                    <section className='p-7 shadow-2xl rounded-xl h-[600px]'>
+                        <h2 className='text-2xl mb-2'>Resumen de compra</h2>
+                        <div className='grid grid-cols-2'>
+                            <span className='font-semibold' > No. Productos </span>
+                            <span className='text-right'> 3 Artículos </span>
+
+                            <span className='font-semibold'> Subtotal </span>
+                            <span className='text-right'> $ 100 </span>
+
+                            <span className='font-semibold'> IVA (16%)</span>
+                            <span className='text-right'> $ 16 </span>
+
+                            <span className='font-bold text-xl mt-10'> Total </span>
+                            <span className='text-right font-bold text-xl mt-10'> $ 116 </span>
+                        </div>
+                    <section className='flex justify-center items-center mt-10'>
+                        <Link
+                            href='/checkout/address'
+                            className='flex btn-primary justify-center w-10/12'
+                        >
+                            Ir a Checkout
+                        </Link>
+                    </section>
+                    </section>
+
                 </div>
             </div>
         </section>
