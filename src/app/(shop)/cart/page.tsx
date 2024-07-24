@@ -20,7 +20,7 @@ export default function Cart() {
 
                 <Title title={'Carrito de Compras'} subtitle={''} className={''} />
 
-                <div className='grid grid-cols-1 justify-center items-center sm:grid-cols-2 gap-10'>
+                <div className='grid grid-cols-1 justify-center sm:grid-cols-2 gap-10'>
                     {/* carrito */}
                     <section className='flex flex-col mt-5'>
                         <span className='text-xl'> Agregar más items </span>

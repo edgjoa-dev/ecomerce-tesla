@@ -7,23 +7,23 @@ import Image from 'next/image';
 const productsCart = [
     initialData.products[0],
     initialData.products[1],
-    initialData.products[2],
-    initialData.products[3],
-    initialData.products[4],
+    // initialData.products[2],
+    // initialData.products[3],
+    // initialData.products[4],
 ];
 
 export default function CheckoutPage() {
     return (
         <section className="flex justify-center items-center mb-72 h-[600px] mt-32 px-10  sm:px-0" >
-            <div className="flex flex-col w-[1000px] p-3 mt-36">
+            <div className="flex flex-col justify-center w-[1000px] p-3 mt-36">
 
                 <Title title={'Verificar compra'} subtitle='Verificación de productos' className={''} />
+                <span className='text-xl'> Editar Compra </span>
+                <Link href='/cart' className='underline mb-5'> Editar Carrito </ Link>
 
-                <div className='grid grid-cols-1 justify-center items-center sm:grid-cols-2 gap-10'>
+                <div className='grid grid-cols-1 justify-center sm:grid-cols-2 gap-10'>
                     {/* carrito */}
                     <section className='flex flex-col mt-5'>
-                        <span className='text-xl'> Editar Compra </span>
-                        <Link href='/cart' className='underline mb-5'> Editar Carrito </ Link>
 
 
                         {/* Items cart */}
@@ -87,7 +87,7 @@ export default function CheckoutPage() {
 
                         <section className='flex flex-col justify-center items-center mt-10'>
                             <p className='mb-5 text-sm font-medium'>
-                                Al hacer click en "Ordenar", aceptas nuestros <a href="#" className='underline'>términos y condiciones</a> y <a href="#" className='underline'>política de privacidad</a>
+                                Al hacer click en <span className='font-semibold'>Ordenar</span>, aceptas nuestros <a href="#" className='underline font-semibold'>términos y condiciones</a> y <a href="#" className='underline font-semibold'>política de privacidad</a>
                             </p>
 
                             <Link
