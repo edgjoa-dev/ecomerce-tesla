@@ -12,7 +12,7 @@ export const TopMenu = () => {
     return(
         <nav className=' flex justify-between items-center w-full p-1 sticky top-0 z-10 backdrop-blur-md'>
             {/* LOGO */}
-            <div>
+            <div className='ml-3' >
                 <Link href='/' className={`${titleFont.className}`} >  <span className='font-bold' > Tesla </span>| Shop </Link>
             </div>
 
