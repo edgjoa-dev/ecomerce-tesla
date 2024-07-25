@@ -1,5 +1,4 @@
 import { initialData } from '@/seed/seed';
-import Link from 'next/link';
 import Image from 'next/image';
 import { Title } from '@/components';
 import { IoCardOutline } from 'react-icons/io5';
@@ -29,7 +28,7 @@ export default function OrderPage({ params }: Props) {
     //redirect(/)
 
     return (
-        <section className="flex justify-center items-center mb-72 h-[600px] mt-32 px-10  sm:px-0" >
+        <section className="flex justify-center items-center mb-72 h-[600px] px-10  sm:px-0" >
             <div className="flex flex-col justify-center w-[1000px] p-3 mt-36">
 
                 <Title title={`Orden #${id}`} subtitle='' className={''} />
