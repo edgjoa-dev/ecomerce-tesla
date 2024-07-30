@@ -1,7 +1,10 @@
-import { initialData } from '@/seed/seed';
-import { Title } from '../../../components/ui/title/Title';
 import Link from 'next/link';
 import Image from 'next/image';
+import { redirect } from 'next/navigation';
+
+import { initialData } from '@/seed/seed';
+
+import { Title } from '../../../components/ui/title/Title';
 import { QuantitySelector } from '@/components';
 
 
@@ -14,6 +17,10 @@ const productsCart = [
 ];
 
 export default function Cart() {
+
+    //redirect("/empty");
+
+
     return (
         <section className="flex justify-center items-center mb-72 h-[600px] mt-32 px-10  sm:px-0" >
             <div className="flex flex-col w-[1000px] p-3 mt-36">

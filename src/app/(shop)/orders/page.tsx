@@ -6,10 +6,10 @@ import { IoCardOutline } from 'react-icons/io5';
 
 export default function ordersPage() {
     return (
-        <>
+        <section className='flex flex-col justify-center min-h-full'>
             <Title title="Orders" subtitle={''} className={''} />
 
-            <div className="mb-10">
+            <div className="mb-10 min-h-[440px]">
                 <table className="min-w-full">
                     <thead className="bg-gray-200 border-b">
                         <tr>
@@ -72,6 +72,6 @@ export default function ordersPage() {
                     </tbody>
                 </table>
             </div>
-        </>
+        </section>
     );
 }
