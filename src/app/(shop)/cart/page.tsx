@@ -65,29 +65,31 @@ export default function Cart() {
                     </section>
 
                     {/* Checkout */}
-                    <section className='p-7 shadow-2xl rounded-xl h-[600px]'>
-                        <h2 className='text-2xl mb-2'>Resumen de compra</h2>
-                        <div className='grid grid-cols-2'>
-                            <span className='font-semibold' > No. Productos </span>
-                            <span className='text-right'> 3 Artículos </span>
+                    <section className='p-7 shadow-2xl rounded-xl h-[400px] flex flex-col justify-between'>
+                        <div>
+                            <h2 className='text-2xl mb-2'>Resumen de compra</h2>
+                            <div className='grid grid-cols-2'>
+                                <span className='font-semibold'> No. Productos </span>
+                                <span className='text-right'> 3 Artículos </span>
 
-                            <span className='font-semibold'> Subtotal </span>
-                            <span className='text-right'> $ 100 </span>
+                                <span className='font-semibold'> Subtotal </span>
+                                <span className='text-right'> $ 100 </span>
 
-                            <span className='font-semibold'> IVA (16%)</span>
-                            <span className='text-right'> $ 16 </span>
+                                <span className='font-semibold'> IVA (16%)</span>
+                                <span className='text-right'> $ 16 </span>
 
-                            <span className='font-bold text-xl mt-10'> Total </span>
-                            <span className='text-right font-bold text-xl mt-10'> $ 116 </span>
+                                <span className='font-bold text-xl mt-10'> Total </span>
+                                <span className='text-right font-bold text-xl mt-10'> $ 116 </span>
+                            </div>
                         </div>
-                    <section className='flex justify-center items-center mt-10'>
-                        <Link
-                            href='/checkout/address'
-                            className='flex btn-primary justify-center w-10/12'
-                        >
-                            Ir a Checkout
-                        </Link>
-                    </section>
+                        <div className='flex justify-center items-center mb-5'>
+                            <Link
+                                href='/checkout/address'
+                                className='flex btn-primary justify-center w-10/12'
+                            >
+                                Ir a Checkout
+                            </Link>
+                        </div>
                     </section>
 
                 </div>
