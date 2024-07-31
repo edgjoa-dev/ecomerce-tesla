@@ -18,25 +18,36 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Git Semantic Version
+      uses: PaulHatch/semantic-version@v5.4.0
+      with:
+        major_pattern: "major:"
+        minor_pattern: "feat:"
+        version_format: "${major}.${minor}.${patch}-prerelease${increment}"
+      id: version
+
+
     - name: Docker login
       env:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
+        NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         echo "Iniciando Login"
         docker login -u $DOCKER_USER -p $DOCKER_PASS
         echo "Fin de login"
-
-    - name: Build Docker Image
-      run: |
-        docker build -t  edgarjoaquin1102/tesloshop:0.0.2 .
-
-    - name: Push Docker Image
-      run: |
-        docker push edgarjoaquin1102/tesloshop:0.0.2
+        echo "New Version: $NEW_VERSION!!!"
 
 
 
+
+    # - name: Build Docker Image
+    #   run: |
+    #     docker build -t  edgarjoaquin1102/tesloshop:0.0.2 .
+
+    # - name: Push Docker Image
+    #   run: |
+    #     docker push edgarjoaquin1102/tesloshop:0.0.2
 
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
