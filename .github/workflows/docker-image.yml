@@ -31,23 +31,25 @@ jobs:
       env:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
-        NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         echo "Iniciando Login"
         docker login -u $DOCKER_USER -p $DOCKER_PASS
         echo "Fin de login"
         echo "New Version: $NEW_VERSION!!!"
 
+    - name: Build Docker Image
+      env:
+        NEW_VERSION: ${{ steps.version.outputs.version }}
+      run: |
+        docker build -t  edgarjoaquin1102/tesloshop:$NEW_VERSION .
+        docker build -t  edgarjoaquin1102/tesloshop:latest .
 
-
-
-    # - name: Build Docker Image
-    #   run: |
-    #     docker build -t  edgarjoaquin1102/tesloshop:0.0.2 .
-
-    # - name: Push Docker Image
-    #   run: |
-    #     docker push edgarjoaquin1102/tesloshop:0.0.2
+    - name: Push Docker Image
+      env:
+        NEW_VERSION: ${{ steps.version.outputs.version }}
+      run: |
+        docker push edgarjoaquin1102/tesloshop:$NEW_VERSION
+        docker build -t  edgarjoaquin1102/tesloshop:latest
 
     # - name: Build the Docker image
     #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
