@@ -1,0 +1,27 @@
+services:
+  postgres-db:
+    image: postgres:15.3
+    restart: always
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+
+
+  # nextjs-app:
+  #   image: node:14 # Puedes usar la versión de Node.js que prefieras
+  #   container_name: nextjs-container
+  #   ports:
+  #     - "3000:3000" # Puerto para la aplicación Next.js
+  #   environment:
+  #     - DATABASE_URL=postgres://usuario:contraseña@db:5432/nombre_de_la_base_de_datos
+  #     # Asegúrate de reemplazar 'usuario', 'contraseña' y 'nombre_de_la_base_de_datos' con tus propios valores
+  #   volumes:
+  #     - ./nextjs-app:/usr/src/app
+  #   working_dir: /usr/src/app
+  #   command: npm run dev # O el comando que uses para iniciar tu aplicación
